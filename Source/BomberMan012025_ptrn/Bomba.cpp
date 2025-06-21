@@ -1,0 +1,61 @@
+#include "Bomba.h"
+#include "Components/StaticMeshComponent.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Materials/MaterialInterface.h"
+
+ABomba::ABomba()
+{
+	PrimaryActorTick.bCanEverTick = true;
+	meshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
+	RootComponent = meshComponent;
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> SphereMeshAsset(TEXT("/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere"));
+	if (SphereMeshAsset.Succeeded())
+	{
+		meshComponent->SetStaticMesh(SphereMeshAsset.Object);
+	}
+	rutasMateriales = {
+		TEXT("/Game/StarterContent/Materials/M_Metal_Gold.M_Metal_Gold"),
+		TEXT("/Game/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.M_Tech_Hex_Tile_Pulse"),
+		TEXT("/Game/StarterContent/Materials/M_Wood_Oak.M_Wood_Oak"),
+		TEXT("/Game/StarterContent/Materials/M_Metal_Copper.M_Metal_Copper"),
+		TEXT("/Game/StarterContent/Materials/M_Ground_Moss.M_Ground_Moss"),
+		TEXT("/Game/StarterContent/Materials/M_CobbleStone_Smooth.M_CobbleStone_Smooth")
+	};
+
+	tamanio = FVector(2.0f);
+	tiempo_bomba = 0.0f;
+}
+
+void ABomba::BeginPlay()
+{
+	Super::BeginPlay();
+	SetActorScale3D(tamanio);
+}
+
+
+void ABomba::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (tiempo_bomba >= 2.5f)
+	{
+		colorearBomba(this);
+		tiempo_bomba = 0.0f;
+	}
+	tiempo_bomba += DeltaTime;
+}
+
+void ABomba::colorearBomba(AActor* bomba)
+{
+	if (!bomba || rutasMateriales.Num() == 0) return;
+	int index = FMath::RandRange(0, rutasMateriales.Num() - 1);
+	UMaterialInterface* nuevoMaterial = LoadObject<UMaterialInterface>(nullptr, *rutasMateriales[index]);
+	if (nuevoMaterial)
+	{
+		ABomba* bomba_real = Cast<ABomba>(bomba);
+		if (bomba_real)
+		{
+			bomba_real->GetMeshComponent()->SetMaterial(0, nuevoMaterial);
+		}
+	}
+}

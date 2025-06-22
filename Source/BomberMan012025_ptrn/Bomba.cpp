@@ -1,4 +1,4 @@
-#include "Bomba.h"
+﻿#include "Bomba.h"
 #include "Components/StaticMeshComponent.h"
 #include "UObject/ConstructorHelpers.h"
 #include "DecoradorColorAleatorio.h"
@@ -6,12 +6,24 @@
 ABomba::ABomba()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	meshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
-	RootComponent = meshComponent;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> SphereMeshAsset(TEXT("/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere"));
-	if (SphereMeshAsset.Succeeded())
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cuerpo"));
+	RootComponent = Mesh;
+
+	Mecha = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mecha"));
+	Mecha->SetupAttachment(Mesh);
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> CuerpoMesh(TEXT("/Game/StarterContent/Modelos3dzx/bombs/bomb1/Bomba_Cylinder002.Bomba_Cylinder002"));
+	if (CuerpoMesh.Succeeded())
 	{
-		meshComponent->SetStaticMesh(SphereMeshAsset.Object);
+		Mesh->SetStaticMesh(CuerpoMesh.Object);
+		Mesh->SetWorldScale3D(EscalaInicial); // ← Escala inicial
+	}
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> MechaMesh(TEXT("/Game/StarterContent/Modelos3dzx/bombs/bomb1/Bomba_Object001.Bomba_Object001"));
+	if (MechaMesh.Succeeded())
+	{
+		Mecha->SetStaticMesh(MechaMesh.Object);
+		Mecha->SetRelativeLocation(FVector(0, 0, 5));
 	}
 	/*rutasMateriales = {
 		TEXT("/Game/StarterContent/Materials/M_Metal_Gold.M_Metal_Gold"),
@@ -71,7 +83,7 @@ void ABomba::Tick(float DeltaTime)
 }
 */
 
-
+//// Método para aceptar un visitante
 void ABomba::aceptar(IVisitante* visitador)
 {
 	if (visitador)

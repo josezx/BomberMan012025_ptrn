@@ -15,15 +15,12 @@ void AContenedorEnemigo::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
-
+///
 IIterador* AContenedorEnemigo::crearIterador()
 {
-	AIteradorEnemigos* iterador = GetWorld()->SpawnActor<AIteradorEnemigos>(AIteradorEnemigos::StaticClass());
-	if (iterador)
-	{
-		iterador->establecerContenedor(this);
-	}
-	return iterador;
+    AIteradorEnemigos* iterador = GetWorld()->SpawnActor<AIteradorEnemigos>();
+    iterador->establecerContenedor(this);
+    return iterador;
 }
 
 void AContenedorEnemigo::agregarEnemigo(AEnemigo* enemigo)
@@ -47,3 +44,8 @@ TArray<AEnemigo*>& AContenedorEnemigo::obtenerEnemigos()
 {
 	return enemigos;
 }
+/*void AContenedorEnemigo::reiniciar()
+{
+	enemigos.Empty();
+}
+*/

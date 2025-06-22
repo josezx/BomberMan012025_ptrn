@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BOMBERMAN012025_PTRN_IteradorEnemigos_generated_h
 
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAIteradorEnemigos(); \
 	friend struct Z_Construct_UClass_AIteradorEnemigos_Statics; \
@@ -24,7 +24,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AIteradorEnemigos*>(this); }
 
 
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AIteradorEnemigos(AIteradorEnemigos&&); \
@@ -36,12 +36,12 @@ public: \
 	NO_API virtual ~AIteradorEnemigos();
 
 
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_11_PROLOG
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_14_GENERATED_BODY \
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_17_PROLOG
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_14_INCLASS_NO_PURE_DECLS \
-	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_14_ENHANCED_CONSTRUCTORS \
+	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_20_INCLASS_NO_PURE_DECLS \
+	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -31,8 +31,14 @@ struct Z_Construct_UClass_AIteradorEnemigos_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// ==============================\n// PATR\xef\xbf\xbdN DE DISE\xef\xbf\xbdO: ITERATOR\n// Clase concreta que implementa la interfaz IIterador.\n// Permite recorrer secuencialmente la colecci\xef\xbf\xbdn de enemigos\n// almacenada en un objeto contenedor (AContenedorEnemigo),\n// sin exponer su estructura interna.\n// ==============================\n" },
+#endif
 		{ "IncludePath", "IteradorEnemigos.h" },
 		{ "ModuleRelativePath", "IteradorEnemigos.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "PATR\xef\xbf\xbdN DE DISE\xef\xbf\xbdO: ITERATOR\nClase concreta que implementa la interfaz IIterador.\nPermite recorrer secuencialmente la colecci\xef\xbf\xbdn de enemigos\nalmacenada en un objeto contenedor (AContenedorEnemigo),\nsin exponer su estructura interna." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_contenedor_MetaData[] = {
 		{ "ModuleRelativePath", "IteradorEnemigos.h" },
@@ -95,10 +101,10 @@ AIteradorEnemigos::~AIteradorEnemigos() {}
 struct Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AIteradorEnemigos, AIteradorEnemigos::StaticClass, TEXT("AIteradorEnemigos"), &Z_Registration_Info_UClass_AIteradorEnemigos, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIteradorEnemigos), 3464585388U) },
+		{ Z_Construct_UClass_AIteradorEnemigos, AIteradorEnemigos::StaticClass, TEXT("AIteradorEnemigos"), &Z_Registration_Info_UClass_AIteradorEnemigos, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIteradorEnemigos), 2811412216U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_394749755(TEXT("/Script/BomberMan012025_ptrn"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_1531496431(TEXT("/Script/BomberMan012025_ptrn"),
 	Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_IteradorEnemigos_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

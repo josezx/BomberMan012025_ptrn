@@ -55,7 +55,7 @@ public: \
 
 
 #define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Iterador_h_11_PROLOG
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Iterador_h_22_GENERATED_BODY \
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Iterador_h_27_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Iterador_h_14_INCLASS_IINTERFACE_NO_PURE_DECLS \

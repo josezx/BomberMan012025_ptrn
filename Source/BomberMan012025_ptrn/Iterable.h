@@ -17,6 +17,12 @@ class UIterable : public UInterface
 /**
  * 
  */
+ // ==============================
+ // PATRÓN DE DISEÑO: ITERATOR
+ // Interfaz que define una colección iterable,
+ // con el método crearIterador() para obtener un iterador.
+ // Implementada por clases como AContenedorEnemigo.
+ // ==============================
 class BOMBERMAN012025_PTRN_API IIterable
 {
 	GENERATED_BODY()

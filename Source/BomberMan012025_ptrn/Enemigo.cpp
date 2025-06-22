@@ -24,7 +24,7 @@ void AEnemigo::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
+//// Método para aceptar un visitante
 void AEnemigo::aceptar(IVisitante* visitador)
 {
 	if (visitador)

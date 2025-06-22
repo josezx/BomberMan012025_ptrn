@@ -7,7 +7,13 @@
 #include "IteradorEnemigos.generated.h"
 
 class AContenedorEnemigo;
-
+// ==============================
+// PATRÓN DE DISEÑO: ITERATOR
+// Clase concreta que implementa la interfaz IIterador.
+// Permite recorrer secuencialmente la colección de enemigos
+// almacenada en un objeto contenedor (AContenedorEnemigo),
+// sin exponer su estructura interna.
+// ==============================
 UCLASS()
 class BOMBERMAN012025_PTRN_API AIteradorEnemigos : public AActor, public IIterador
 {

@@ -17,6 +17,11 @@ class UIterador : public UInterface
 /**
  * 
  */
+ // ==============================
+ // PATRÓN DE DISEÑO: ITERATOR
+ // Interfaz que define las operaciones necesarias para recorrer
+ // una colección de elementos secuencialmente.
+ // Implementado por clases como AIteradorEnemigos.
 class BOMBERMAN012025_PTRN_API IIterador
 {
 	GENERATED_BODY()

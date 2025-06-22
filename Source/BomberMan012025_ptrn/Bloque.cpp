@@ -46,16 +46,16 @@ void ABloque::BeginPlay()
 void ABloque::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    tiempo_bloque += DeltaTime;
+   /* tiempo_bloque += DeltaTime; */
     tiempo_decorar += DeltaTime;
 
-    if (tiempo_bloque >= 0.3f)
+   /* if (tiempo_bloque >= 0.3f)
     {
         rotacion.Add(0.0f, 1.0f, 0.0f);
         SetActorRotation(rotacion);
         tiempo_bloque = 0.0f;
     }
-
+   */
     if (tiempo_decorar >= 1.5f && decorador)
     {
         decorador->colorear();
@@ -114,7 +114,7 @@ void ABloque::colorearBomba(AActor* _bloque)
     }
 }
 */
-
+//// Implementación del patrón Visitor
 void ABloque::aceptar(IVisitante* visitador)
 {
 	if (visitador)

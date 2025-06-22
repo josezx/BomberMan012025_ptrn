@@ -5,8 +5,8 @@
 AIteradorEnemigos::AIteradorEnemigos()
 {
 	PrimaryActorTick.bCanEverTick = false;
-	indice = 0;
 	contenedor = nullptr;
+	indice = 0;
 }
 
 void AIteradorEnemigos::BeginPlay()

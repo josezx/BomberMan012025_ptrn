@@ -21,7 +21,13 @@ public:
     virtual void Tick(float DeltaTime) override;
     UStaticMeshComponent* GetMeshComponent() const { return meshComponent; }
 	virtual void aceptar(class IVisitante* visitador) override;
+    UPROPERTY(VisibleAnywhere)
+    class UStaticMeshComponent* Mesh;
 
+    UPROPERTY(VisibleAnywhere)
+    class UStaticMeshComponent* Mecha;
+    UPROPERTY(EditAnywhere, Category = "Escala")
+    FVector EscalaInicial = FVector(0.4f);
 private:
     UPROPERTY()
     UStaticMeshComponent* meshComponent;

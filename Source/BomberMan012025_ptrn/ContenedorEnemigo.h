@@ -30,4 +30,9 @@ public:
 	void agregarEnemigo(AEnemigo* enemigo);
 	AEnemigo* obtenerEnemigo(int index);
 	TArray<AEnemigo*>& obtenerEnemigos();
+	/**
+ * Elimina todos los enemigos almacenados en el contenedor.
+ * Útil para reiniciar el estado del juego.
+ */
+	/*void reiniciar();*/
 };

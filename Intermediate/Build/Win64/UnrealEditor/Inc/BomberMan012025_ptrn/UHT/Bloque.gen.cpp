@@ -12,7 +12,8 @@ void EmptyLinkFunctionForGeneratedCodeBloque() {}
 // Begin Cross Module References
 BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_ABloque();
 BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_ABloque_NoRegister();
-BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_UDecoradorColor_NoRegister();
+BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_UClonable_NoRegister();
+BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_UVisitable_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -66,7 +67,8 @@ UObject* (*const Z_Construct_UClass_ABloque_Statics::DependentSingletons[])() = 
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABloque_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABloque_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UDecoradorColor_NoRegister, (int32)VTABLE_OFFSET(ABloque, IDecoradorColor), false },  // 1736437623
+	{ Z_Construct_UClass_UClonable_NoRegister, (int32)VTABLE_OFFSET(ABloque, IClonable), false },  // 3451096225
+	{ Z_Construct_UClass_UVisitable_NoRegister, (int32)VTABLE_OFFSET(ABloque, IVisitable), false },  // 2163094764
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ABloque_Statics::ClassParams = {
 	&ABloque::StaticClass,
@@ -103,10 +105,10 @@ ABloque::~ABloque() {}
 struct Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Bloque_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABloque, ABloque::StaticClass, TEXT("ABloque"), &Z_Registration_Info_UClass_ABloque, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABloque), 3250395174U) },
+		{ Z_Construct_UClass_ABloque, ABloque::StaticClass, TEXT("ABloque"), &Z_Registration_Info_UClass_ABloque, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABloque), 957537005U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Bloque_h_1250334033(TEXT("/Script/BomberMan012025_ptrn"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Bloque_h_9308592(TEXT("/Script/BomberMan012025_ptrn"),
 	Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Bloque_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_Bloque_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

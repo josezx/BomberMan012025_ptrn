@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BOMBERMAN012025_PTRN_BomberMan012025_ptrnGameMode_generated_h
 
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABomberMan012025_ptrnGameMode(); \
 	friend struct Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ABomberMan012025_ptrnGameMode)
 
 
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABomberMan012025_ptrnGameMode(ABomberMan012025_ptrnGameMode&&); \
@@ -35,12 +35,12 @@ public: \
 	BOMBERMAN012025_PTRN_API virtual ~ABomberMan012025_ptrnGameMode();
 
 
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_10_PROLOG
-#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_13_GENERATED_BODY \
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_11_PROLOG
+#define FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_13_INCLASS_NO_PURE_DECLS \
-	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_13_ENHANCED_CONSTRUCTORS \
+	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_14_INCLASS_NO_PURE_DECLS \
+	FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

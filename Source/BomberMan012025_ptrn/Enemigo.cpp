@@ -25,3 +25,11 @@ void AEnemigo::Tick(float DeltaTime)
 
 }
 
+void AEnemigo::aceptar(IVisitante* visitador)
+{
+	if (visitador)
+	{
+		visitador->visitar(this);
+	}
+}
+

@@ -4,11 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
-#include "DecoradorColor.generated.h"
+#include "Clonable.generated.h"
 
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
-class UDecoradorColor : public UInterface
+class UClonable : public UInterface
 {
 	GENERATED_BODY()
 };
@@ -16,11 +16,11 @@ class UDecoradorColor : public UInterface
 /**
  * 
  */
-class BOMBERMAN012025_PTRN_API IDecoradorColor
+class BOMBERMAN012025_PTRN_API IClonable
 {
 	GENERATED_BODY()
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void colorearBomba(class AActor* bomba) = 0;
+	virtual IClonable* clonar(UWorld* _mundo, FVector _posicion, FRotator _rotacion) = 0;
 };

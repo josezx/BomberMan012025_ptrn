@@ -11,6 +11,8 @@
     <None Include="..\..\Source\BomberMan012025_ptrnEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -66,10 +68,28 @@
     <ClInclude Include="..\..\Source\BomberMan012025_ptrn\BomberMan012025_ptrnGameMode.h">
       <Filter>Source\BomberMan012025_ptrn</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\DecoradorColor.cpp">
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\Clonable.cpp">
       <Filter>Source\BomberMan012025_ptrn</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\DecoradorColor.h">
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\Clonable.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\ContenedorEnemigo.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\ContenedorEnemigo.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\DecoradorColorAleatorio.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\DecoradorColorAleatorio.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\Elemento.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\Elemento.h">
       <Filter>Source\BomberMan012025_ptrn</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\BomberMan012025_ptrn\Enemigo.cpp">
@@ -100,6 +120,48 @@
       <Filter>Source\BomberMan012025_ptrn</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BomberMan012025_ptrn\FabricaEnemigo.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\IDecoradorColor.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\IDecoradorColor.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\Iterable.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\Iterable.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\Iterador.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\Iterador.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\IteradorEnemigos.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\IteradorEnemigos.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\Visitable.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\Visitable.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\VisitadorRotador.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\VisitadorRotador.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\Visitante.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\Visitante.h">
       <Filter>Source\BomberMan012025_ptrn</Filter>
     </ClInclude>
   </ItemGroup>

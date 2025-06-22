@@ -2,12 +2,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "DecoradorColor.h"
+#include "IDecoradorColor.h"
+#include "Clonable.h"
+#include "Visitable.h"
 #include "Bloque.generated.h"
 
-
 UCLASS()
-class BOMBERMAN012025_PTRN_API ABloque : public AActor, public IDecoradorColor
+class BOMBERMAN012025_PTRN_API ABloque : public AActor, public IClonable, public IVisitable
 {
     GENERATED_BODY()
 
@@ -20,12 +21,9 @@ protected:
 public:
     virtual void Tick(float DeltaTime) override;
 
-    ABloque* clonar(UWorld* _mundo, FVector _posicion, FRotator _rotacion);
-
+    virtual IClonable* clonar(UWorld* _mundo, FVector _posicion, FRotator _rotacion) override;
 	UStaticMeshComponent* GetMeshComponent() const { return meshComponent; }
-
-	virtual void colorearBomba(class AActor* _bloque) override;
-
+    virtual void aceptar(IVisitante* visitador) override;
 
 private:
     UPROPERTY()
@@ -34,11 +32,12 @@ private:
     UPROPERTY()
     class UMaterialInterface* material;
 
-    TArray<FString> rutasMateriales;
+/*    TArray<FString> rutasMateriales;*/
 
     FVector posicion;
     FVector tamanio;
     FRotator rotacion;
     float tiempo_bloque;
     float tiempo_decorar;
+    IIDecoradorColor* decorador; // Nuevo: decorador externo
 };

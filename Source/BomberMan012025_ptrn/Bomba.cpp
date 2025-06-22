@@ -1,7 +1,7 @@
 #include "Bomba.h"
 #include "Components/StaticMeshComponent.h"
 #include "UObject/ConstructorHelpers.h"
-#include "Materials/MaterialInterface.h"
+#include "DecoradorColorAleatorio.h"
 
 ABomba::ABomba()
 {
@@ -13,7 +13,7 @@ ABomba::ABomba()
 	{
 		meshComponent->SetStaticMesh(SphereMeshAsset.Object);
 	}
-	rutasMateriales = {
+	/*rutasMateriales = {
 		TEXT("/Game/StarterContent/Materials/M_Metal_Gold.M_Metal_Gold"),
 		TEXT("/Game/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.M_Tech_Hex_Tile_Pulse"),
 		TEXT("/Game/StarterContent/Materials/M_Wood_Oak.M_Wood_Oak"),
@@ -21,7 +21,7 @@ ABomba::ABomba()
 		TEXT("/Game/StarterContent/Materials/M_Ground_Moss.M_Ground_Moss"),
 		TEXT("/Game/StarterContent/Materials/M_CobbleStone_Smooth.M_CobbleStone_Smooth")
 	};
-
+	*/
 	tamanio = FVector(2.0f);
 	tiempo_bomba = 0.0f;
 }
@@ -30,22 +30,32 @@ void ABomba::BeginPlay()
 {
 	Super::BeginPlay();
 	SetActorScale3D(tamanio);
+	// Instanciamos el decorador
+	decorador = new DecoradorColorAleatorio(this);
 }
 
 
 void ABomba::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	tiempo_bomba += DeltaTime;
 
-	if (tiempo_bomba >= 2.5f)
+	if (tiempo_bomba >= 2.5f && decorador)
+	{
+		decorador->colorear();  // Llama al decorador
+		tiempo_bomba = 0.0f;
+	}
+	/*if (tiempo_bomba >= 2.5f)
 	{
 		colorearBomba(this);
 		tiempo_bomba = 0.0f;
 	}
 	tiempo_bomba += DeltaTime;
+	*/
+
 }
 
-void ABomba::colorearBomba(AActor* bomba)
+/*void ABomba::colorearBomba(AActor* bomba)
 {
 	if (!bomba || rutasMateriales.Num() == 0) return;
 	int index = FMath::RandRange(0, rutasMateriales.Num() - 1);
@@ -57,5 +67,15 @@ void ABomba::colorearBomba(AActor* bomba)
 		{
 			bomba_real->GetMeshComponent()->SetMaterial(0, nuevoMaterial);
 		}
+	}
+}
+*/
+
+
+void ABomba::aceptar(IVisitante* visitador)
+{
+	if (visitador)
+	{
+		visitador->visitar(this);
 	}
 }

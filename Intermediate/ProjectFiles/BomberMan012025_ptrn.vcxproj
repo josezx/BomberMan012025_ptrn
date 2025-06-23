@@ -341,6 +341,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\BomberMan012025_ptrn\FabricaEnemigo.h"/>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\FachadaJuego.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\FachadaJuego.h"/>
     <ClCompile Include="..\..\Source\BomberMan012025_ptrn\IDecoradorColor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

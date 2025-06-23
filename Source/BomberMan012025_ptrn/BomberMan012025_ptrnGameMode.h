@@ -4,44 +4,44 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "FabricaEnemigo.h"
-#include "ContenedorEnemigo.h"
 #include "BomberMan012025_ptrnGameMode.generated.h"
 
 UCLASS(minimalapi)
 class ABomberMan012025_ptrnGameMode : public AGameModeBase
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
+public:
+    ABomberMan012025_ptrnGameMode();
+    virtual void Tick(float DeltaTime) override;
+    class AFachadaJuego* Fachada;
+protected:
+    virtual void BeginPlay() override;
+public:
+    TArray<TArray<int>> MapaLaberinto;
+    int TFilas;
+    int TColumnas;
 private:
-	float tiempo;
-	float tiempo_enemigo;
-	int cantidad_enemigo;
-	//bloques y bombas
-	class ABloque* bloque_primario;
-	class ABomba* bomba_primaria;
-	//// Visitador para aplicar patrón Visitor
-	class AVisitadorRotador* visitador_rotador;
-    //// Contenedor de enemigos para aplicar Iterator
-	AContenedorEnemigo* contenedor_enemigos;
-	
+    float tiempo;
+    float tiempo_enemigo;
+    int cantidad_enemigo;
 
-	UPROPERTY()
-	AFabricaEnemigo* fabrica_enemigo;
-public:
-	// NUEVO: Mapa lógico del laberinto y dimensiones
-	TArray<TArray<int>> MapaLaberinto;
-	int TFilas;
-	int TColumnas;
-	// Generador de laberinto (Prototype + DFS)
-	void generadorBordes();
-	// Posiciona al jugador en una celda válida aleatoriamente 
-	void PosicionarJugadorAleatoriamente();
-public:
-	ABomberMan012025_ptrnGameMode();
-	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaTime) override;
+    UPROPERTY()
+    class ABloque* bloque_primario;
+
+    UPROPERTY()
+    class ABomba* bomba_primaria;
+
+    UPROPERTY()
+    class AVisitadorRotador* visitador_rotador;
+
+    UPROPERTY()
+    class AContenedorEnemigo* contenedor_enemigos;
+
+    UPROPERTY()
+    class AFabricaEnemigo* fabrica_enemigo;
+
+    void generadorBordes();
+    void PosicionarJugadorAleatoriamente();
+
 };
-
-
-

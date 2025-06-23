@@ -122,6 +122,12 @@
     <ClInclude Include="..\..\Source\BomberMan012025_ptrn\FabricaEnemigo.h">
       <Filter>Source\BomberMan012025_ptrn</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BomberMan012025_ptrn\FachadaJuego.cpp">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BomberMan012025_ptrn\FachadaJuego.h">
+      <Filter>Source\BomberMan012025_ptrn</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BomberMan012025_ptrn\IDecoradorColor.cpp">
       <Filter>Source\BomberMan012025_ptrn</Filter>
     </ClCompile>

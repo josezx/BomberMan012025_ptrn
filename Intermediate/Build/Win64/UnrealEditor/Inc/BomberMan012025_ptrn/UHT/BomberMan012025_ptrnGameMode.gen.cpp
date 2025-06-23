@@ -10,9 +10,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBomberMan012025_ptrnGameMode() {}
 
 // Begin Cross Module References
+BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_ABloque_NoRegister();
+BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_ABomba_NoRegister();
 BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_ABomberMan012025_ptrnGameMode();
 BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_ABomberMan012025_ptrnGameMode_NoRegister();
+BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_AContenedorEnemigo_NoRegister();
 BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_AFabricaEnemigo_NoRegister();
+BOMBERMAN012025_PTRN_API UClass* Z_Construct_UClass_AVisitadorRotador_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 UPackage* Z_Construct_UPackage__Script_BomberMan012025_ptrn();
 // End Cross Module References
@@ -35,10 +39,26 @@ struct Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics
 		{ "ModuleRelativePath", "BomberMan012025_ptrnGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bloque_primario_MetaData[] = {
+		{ "ModuleRelativePath", "BomberMan012025_ptrnGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bomba_primaria_MetaData[] = {
+		{ "ModuleRelativePath", "BomberMan012025_ptrnGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_visitador_rotador_MetaData[] = {
+		{ "ModuleRelativePath", "BomberMan012025_ptrnGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_contenedor_enemigos_MetaData[] = {
+		{ "ModuleRelativePath", "BomberMan012025_ptrnGameMode.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_fabrica_enemigo_MetaData[] = {
 		{ "ModuleRelativePath", "BomberMan012025_ptrnGameMode.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_bloque_primario;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_bomba_primaria;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_visitador_rotador;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_contenedor_enemigos;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_fabrica_enemigo;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -47,8 +67,16 @@ struct Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_bloque_primario = { "bloque_primario", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABomberMan012025_ptrnGameMode, bloque_primario), Z_Construct_UClass_ABloque_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bloque_primario_MetaData), NewProp_bloque_primario_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_bomba_primaria = { "bomba_primaria", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABomberMan012025_ptrnGameMode, bomba_primaria), Z_Construct_UClass_ABomba_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bomba_primaria_MetaData), NewProp_bomba_primaria_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_visitador_rotador = { "visitador_rotador", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABomberMan012025_ptrnGameMode, visitador_rotador), Z_Construct_UClass_AVisitadorRotador_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_visitador_rotador_MetaData), NewProp_visitador_rotador_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_contenedor_enemigos = { "contenedor_enemigos", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABomberMan012025_ptrnGameMode, contenedor_enemigos), Z_Construct_UClass_AContenedorEnemigo_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_contenedor_enemigos_MetaData), NewProp_contenedor_enemigos_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_fabrica_enemigo = { "fabrica_enemigo", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABomberMan012025_ptrnGameMode, fabrica_enemigo), Z_Construct_UClass_AFabricaEnemigo_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_fabrica_enemigo_MetaData), NewProp_fabrica_enemigo_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_bloque_primario,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_bomba_primaria,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_visitador_rotador,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_contenedor_enemigos,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::NewProp_fabrica_enemigo,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABomberMan012025_ptrnGameMode_Statics::PropPointers) < 2048);
@@ -92,10 +120,10 @@ ABomberMan012025_ptrnGameMode::~ABomberMan012025_ptrnGameMode() {}
 struct Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABomberMan012025_ptrnGameMode, ABomberMan012025_ptrnGameMode::StaticClass, TEXT("ABomberMan012025_ptrnGameMode"), &Z_Registration_Info_UClass_ABomberMan012025_ptrnGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABomberMan012025_ptrnGameMode), 4098458569U) },
+		{ Z_Construct_UClass_ABomberMan012025_ptrnGameMode, ABomberMan012025_ptrnGameMode::StaticClass, TEXT("ABomberMan012025_ptrnGameMode"), &Z_Registration_Info_UClass_ABomberMan012025_ptrnGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABomberMan012025_ptrnGameMode), 3512922107U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_914264794(TEXT("/Script/BomberMan012025_ptrn"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_973833516(TEXT("/Script/BomberMan012025_ptrn"),
 	Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BomberMan012025_ptrn_Source_BomberMan012025_ptrn_BomberMan012025_ptrnGameMode_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
